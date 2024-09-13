@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Play Hangman!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Let's Play Hangman!</h1>
+  <p>You know how to play...start guessing some letters, try not to kill the person!</p>
+  <div class="game-container">
+    <svg height="250" width="200" class="figure-container">
+      <line x1="60" y1="20" />
+    </svg>
+  </div>
+
+
+
+
+
+  <p>Example of SVG Below to play with</p>
+  <svg width="600" height="300">
+    <!-- Just drawing a red circle with a radius of 40 -->
+    <circle cx="100" cy="100" r="90" stroke="black" stroke-width="3" fill="red" id="moving-circle" />
+  </svg>
+  <style>
+    /* Animating the circle with some inline text */
+    #moving-circle {
+      animation: moveCircle 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes moveCircle {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(400px)
+      }
+    }
+  </style>
+  <script src="script.js"></script>
+</body>
+
+</html>
