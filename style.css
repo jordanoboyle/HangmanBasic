@@ -92,6 +92,7 @@ h1 {
   width: 20px;
 }
 
+/* POP-You Win! */
 .popup-container {
   background-image: linear-gradient(to right, rgba(141, 42, 42, 0.8), rgb(209, 17, 17));
   position: fixed;
@@ -100,11 +101,61 @@ h1 {
   right: 10%;
   left: 10%;
   display: flex;
-  /* display: none; */
+  display: none;
   align-items: center;
   justify-content: center;
   border: 3px solid black;
   border-radius: 40px;
   font-size: 20px;
   padding: 10px;
+}
+
+.popup {
+  background: rgba(36, 84, 32, 0.4);
+  border: solid black;
+  border-color: black;
+  border-radius: 10px;
+  box-shadow: 0 30px 20px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+
+}
+
+#play-button {
+  cursor: pointer;
+  background-color: silver;
+  color: black;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+#play-button:active {
+  transform: scale(0.90);
+}
+
+#play-button:focus {
+  outline: 0;
+}
+
+/* Notification of already chosen letters */
+.letter-used-container {
+  background-image: linear-gradient(to right, rgba(141, 42, 42, 0.8), rgb(209, 17, 17));
+  border: solid black;
+  border-radius: 10px 10px 0 0;
+  padding: 30px;
+  font-size: 20px;
+  position: absolute;
+  bottom: -100px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.letter-used-container p {
+  margin: 0;
+}
+
+.letter-used-container.show {
+  transform: translateY(-100px);
 }
