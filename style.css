@@ -22,3 +22,7 @@ body {
   /* linecap is self explanatory,  caps the line edges.*/
   stroke-linecap: round;
 }
+
+.figure-part {
+  display: none;
+}

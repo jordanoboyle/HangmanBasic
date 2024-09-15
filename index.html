@@ -20,46 +20,71 @@
       <line x1="20" y1="240" x2="100" y2="240" />
 
       <!-- Head -->
-      <circle cx="140" cy="80" r="15" />
+      <circle cx="140" cy="80" r="15" class="figure-part" />
 
       <!-- body -->
-      <line x1="140" y1="100" x2="140" y2="180" />
+      <line x1="140" y1="100" x2="140" y2="180" class="figure-part" />
 
       <!-- arms -->
-      <line x1="135" y1="120" x2="100" y2="140" />
-      <line x2="145" y2="120" x1="175" y1="140" />
+      <line x1="135" y1="120" x2="100" y2="140" class="figure-part" />
+      <line x2="145" y2="120" x1="175" y1="140" class="figure-part" />
 
       <!-- feet -->
-      <line x1="135" y1="180" x2="100" y2="215" />
-      <line x2="145" y2="180" x1="175" y1="215" />
+      <line x1="135" y1="180" x2="100" y2="215" class="figure-part" />
+      <line x2="145" y2="180" x1="175" y1="215" class="figure-part" />
     </svg>
+    <br>
+  </div>
+
+  <div class="wrong-letters-containers">
+    <div id="wrong-letters">
+      <p>Wrong </p>
+      <span>e, r, y, s, j</span>
+    </div>
+  </div>
+  <div class="word" id="word">
+    <div class="letter">d</div>
+    <div class="letter">a</div>
+    <div class="letter">r</div>
+    <div class="letter">k</div>
+    <div class="letter">a</div>
+    <div class="letter">g</div>
+  </div>
+
+  <!-- Container for Final Messages -->
+  <div class="popup-container" id="popup-container">
+    <div class="popup">
+      <h2 id="final-message">You Saved the Hangman!</h2>
+      <button id="play-button">Play Again</button>
+    </div>
   </div>
 
 
-
-
-
-  <p>Example of SVG Below to play with</p>
-  <svg width="600" height="300">
-    <!-- Just drawing a red circle with a radius of 40 -->
-    <circle cx="100" cy="100" r="90" stroke="black" stroke-width="3" fill="red" id="moving-circle" />
-  </svg>
-  <style>
-    /* Animating the circle with some inline text */
-    #moving-circle {
-      animation: moveCircle 3s infinite alternate ease-in-out;
-    }
-
-    @keyframes moveCircle {
-      0% {
-        transform: translateX(0);
+  <!-- Just drawing a red circle with a radius of 40 -->
+  <div>
+    <p>Example of SVG Below to play with</p>
+    <svg width="600" height="300">
+      <circle cx="100" cy="100" r="90" stroke="black" stroke-width="3" fill="red" id="moving-circle" />
+    </svg>
+    <style>
+      /* Animating the circle with some inline text */
+      #moving-circle {
+        animation: moveCircle 3s infinite alternate ease-in-out;
       }
 
-      100% {
-        transform: translateX(400px)
+      @keyframes moveCircle {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(400px)
+        }
       }
-    }
-  </style>
+    </style>
+  </div>
+
+
   <script src="script.js"></script>
 </body>
 
