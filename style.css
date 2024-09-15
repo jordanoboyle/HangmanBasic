@@ -44,6 +44,7 @@ h1 {
   stroke-opacity: 70%;
   /* linecap is self explanatory,  caps the line edges.*/
   stroke-linecap: round;
+
 }
 
 .figure-part {
@@ -66,4 +67,44 @@ h1 {
 
 .wrong-letters-container span {
   font-size: 35px;
+}
+
+.word {
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.letter {
+  color: red;
+  border-bottom: red solid 4px;
+  display: inline-flex;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px 4px;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  height: 50px;
+  width: 20px;
+}
+
+.popup-container {
+  background-image: linear-gradient(to right, rgba(141, 42, 42, 0.8), rgb(209, 17, 17));
+  position: fixed;
+  top: 5%;
+  bottom: 5%;
+  right: 10%;
+  left: 10%;
+  display: flex;
+  /* display: none; */
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 40px;
+  font-size: 20px;
+  padding: 10px;
 }
