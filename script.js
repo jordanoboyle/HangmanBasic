@@ -20,7 +20,7 @@ const words = [
 ];
 //this can be a fetch request to a backend pulling from a database of different words available
 
-let selectedWord = words[Math.floor(Math.random() * words.length)];
+let selectedWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
 console.log("Selected Word", selectedWord);
 
 let   correctLetters        = [];
@@ -53,12 +53,16 @@ function displayWord() {
 
 //Show Notification of Second Letter used
 function showNotification() {
-  return true;
+  notification.classList.add('show');
+
+  setTimeout(() => {
+    notification.classList.remove('show');
+  }, 2000);
 }
 
 //Display Wrong Letters in element
 function updateWrongLettersEl() {
-  return true;
+  return console.log('UPDATE WRONG');
 }
 
 //Key Down Letter Selection
@@ -72,6 +76,7 @@ window.addEventListener('keydown', e => {
     if (selectedWord.includes(letterAcquired)) {
       if (!correctLetters.includes(letterAcquired)) {
         correctLetters.push(letterAcquired);
+        console.log("Letter added to Correct letters", letterAcquired);
 
         displayWord();
       } else {
@@ -80,6 +85,7 @@ window.addEventListener('keydown', e => {
     } else {
       if (!wrongLetters.includes(letterAcquired)) {
         wrongLetters.push(letterAcquired);
+        console.log("Letter Added to wrongLetters", letterAcquired);
 
         updateWrongLettersEl();
       }

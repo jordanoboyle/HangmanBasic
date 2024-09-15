@@ -141,7 +141,7 @@ h1 {
 }
 
 /* Notification of already chosen letters */
-.letter-used-container {
+#letter-used-container {
   background-image: linear-gradient(to right, rgba(141, 42, 42, 0.8), rgb(209, 17, 17));
   border: solid black;
   border-radius: 10px 10px 0 0;
@@ -152,10 +152,10 @@ h1 {
   transition: transform 0.4s ease-in-out;
 }
 
-.letter-used-container p {
+#letter-used-container p {
   margin: 0;
 }
 
-.letter-used-container.show {
+#letter-used-container.show {
   transform: translateY(-100px);
 }
