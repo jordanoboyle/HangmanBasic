@@ -62,7 +62,10 @@ function showNotification() {
 
 //Display Wrong Letters in element
 function updateWrongLettersEl() {
-  return console.log('UPDATE WRONG');
+  wrongLettersEl.innerHTML = `
+    ${wrongLetters.length > 0 ? '<p> Wrong </p>' : ''}
+    ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+  `;
 }
 
 //Key Down Letter Selection
