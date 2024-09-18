@@ -116,6 +116,20 @@ window.addEventListener('keydown', e => {
   }
 });
 
+playAgainBtn.addEventListener('click', () => {
+  //This requires resetting the DOM
+  //Empty the arrays
+  correctLetters.splice(0);
+  wrongLetters.splice(0);
 
+  selectedWord = words[Math.floor(Math.random() * words.length)];
+
+  displayWord();
+
+  updateWrongLettersEl();
+
+  popup.style.display = 'none';
+  //This resets all the DOM elements to their original setting
+});
 
 displayWord();
