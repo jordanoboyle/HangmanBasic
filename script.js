@@ -60,13 +60,33 @@ function showNotification() {
   }, 2000);
 }
 
+console.log("figure parts array", figureParts);
+
 //Display Wrong Letters in element
 function updateWrongLettersEl() {
+  //Display the wrong letters
   wrongLettersEl.innerHTML = `
     ${wrongLetters.length > 0 ? '<p> Wrong </p>' : ''}
     ${wrongLetters.map(letter => `<span>${letter}</span>`)}
   `;
+  //Render the Parts
+  figureParts.forEach((part, index) => {
+    const wrong = wrongLetters.length - 0;  //remember here that wrongLetters gets updated first here. 
+    if (index < wrong) {
+      part.style.display = 'block';
+    }  else {
+      part.style.display = 'none';
+    }
+  });
+
+  //Check if lost
+  if (wrongLetters.length === figureParts.length) {
+    finalMessage.innerText = "AHH A SHORT DROP AND QUICK STOP! :(";
+    popup.style.display = 'flex';
+  }
 }
+
+//EVENT LISTENERS 
 
 //Key Down Letter Selection
 window.addEventListener('keydown', e => {
@@ -95,5 +115,7 @@ window.addEventListener('keydown', e => {
     }
   }
 });
+
+
 
 displayWord();
